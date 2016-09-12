@@ -22,7 +22,19 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="br.edu.iff.pooa20161.contatosapp" />
 
-        <activity android:name=".activity.ContatoActivity"></activity>
+        <activity android:name=".activity.ContatoActivity">
+            
+        </activity>
+        <activity
+            android:name=".activity.ListaContatoActivity"
+            android:label="@string/title_activity_lista_contato"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
