@@ -38,6 +38,8 @@ public class ContatoActivity extends AppCompatActivity {
         telefone.setText(telefonep);
 
         btsalvar = (Button) findViewById(R.id.btSalvarContato);
+        btalterar = (Button) findViewById(R.id.btAlterarContato);
+
         btsalvar.setOnClickListener( new View.OnClickListener(){
 
             @Override
@@ -45,6 +47,24 @@ public class ContatoActivity extends AppCompatActivity {
                 salvar();
             }
         });
+        btalterar.setOnClickListener( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                alterar();
+            }
+        });
+
+        if (id !=0) {
+            btsalvar.setEnabled(false);
+            btsalvar.setClickable(false);
+            btsalvar.setVisibility(View.INVISIBLE);
+        }else{
+            btalterar.setEnabled(false);
+            btalterar.setClickable(false);
+            btalterar.setVisibility(View.INVISIBLE);
+
+        }
 
     }
     public void salvar() {
@@ -57,6 +77,25 @@ public class ContatoActivity extends AppCompatActivity {
         contato.save();
 
         Toast.makeText(this,"Contato Cadastrado",Toast.LENGTH_LONG).show();
+        this.finish();
+
+    }
+
+    public void alterar() {
+
+        nome = (EditText) findViewById(R.id.etNomeContato);
+        email = (EditText) findViewById(R.id.etEmailContato);
+        telefone = (EditText) findViewById(R.id.etTelefoneContato);
+
+        Contato contato = Contato.findById(Contato.class, id);
+
+        contato.setNome(nome.getText().toString());
+        contato.setEmail(email.getText().toString());
+        contato.setTelefone(telefone.getText().toString());
+
+        contato.save();
+
+        Toast.makeText(this,"Contato Alterado",Toast.LENGTH_LONG).show();
         this.finish();
 
     }

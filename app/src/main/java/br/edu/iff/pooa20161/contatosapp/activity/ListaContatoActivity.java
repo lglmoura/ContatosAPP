@@ -50,6 +50,21 @@ public class ListaContatoActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ContatoAdapter(this,contatos);
         lista.setAdapter(adapter);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ListaContatoActivity.this,ContatoActivity.class);
+
+                intent.putExtra("id",contatos.get(i).getId().intValue());
+                intent.putExtra("nome",contatos.get(i).getNome());
+                intent.putExtra("email",contatos.get(i).getEmail());
+                intent.putExtra("telefone",contatos.get(i).getTelefone());
+
+                startActivity(intent);
+
+            }
+        });
+
 
 
 
