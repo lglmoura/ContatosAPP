@@ -4,11 +4,11 @@
     <string name="title_activity_lista_contato">ListaContatoActivity</string>
     <string-array name="contatos">
         <item>Luiz</item>
-        <item>Gustavo</item>
+        <item>Gustavo1</item>
         <item>Luiz</item>
-        <item>Gustavo</item>
+        <item>Gustavo2</item>
         <item>Luiz</item>
-        <item>Gustavo</item>
+        <item>Gustavo3</item>
         <item>Luiz</item>
         <item>Gustavo</item>
         <item>Luiz</item>

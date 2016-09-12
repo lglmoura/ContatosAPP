@@ -21,8 +21,8 @@ public class ListaContatoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ListView lista = (ListView) findViewById(R.id.lvContatos);
-                ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.contatos,android.R.layout.simple_list_item_1);
-                lista.setAdapter(adapter);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.contatos,android.R.layout.simple_list_item_1);
+        lista.setAdapter(adapter);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

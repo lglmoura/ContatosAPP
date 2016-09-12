@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="DATABASE"
-            android:value="sugarcontato.sqlite" />
+            android:value="contatoAPP.sqlite" />
         <meta-data
             android:name="VERSION"
             android:value="1" />
@@ -23,7 +23,7 @@
             android:value="br.edu.iff.pooa20161.contatosapp" />
 
         <activity android:name=".activity.ContatoActivity">
-            
+
         </activity>
         <activity
             android:name=".activity.ListaContatoActivity"
